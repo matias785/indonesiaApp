@@ -1,9 +1,8 @@
-
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Rep. de Indonesia</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -13,15 +12,32 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="about">About</a>
-        </li> 
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="/contact">Contacto</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/privateprofile">Perfil privado</a>
+        </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/signin">Iniciar Sesion</a>
-        </li>
+        <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
+          <li class="nav-item">
+            <a class="nav-link" href="/signin">Iniciar Sesion</a>
+          </li>
+
+        </ng-container>
+        <ng-template #loggedIn>
+          <li class="nav-item">
+            <a class="nav-link" href="/teachers">Docentes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/newuser">Crear Docente</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="authService.logout()">Cerrar Sesion</a>
+          </li>
+        </ng-template>
       </ul>
     </div>
   </div>

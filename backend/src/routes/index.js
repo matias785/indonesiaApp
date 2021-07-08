@@ -11,8 +11,8 @@ router.get('/', (req, res) =>
     res.send('hello world'))
 
 router.post('/newuser', async (req, res) => {
-    const { name, lastName, email, password, position} = req.body;
-    const newUser = new User({name, lastName, email, password, position})
+    const { name, lastName, gender, yearsOld, dni, adress, email, type, matter, password} = req.body;
+    const newUser = new User({name, lastName, gender, yearsOld, dni, adress, email, type, matter, password})
     await newUser.save();
 
     const token = jwt.sign({_id: newUser._id}, 'secretkey')
@@ -60,6 +60,12 @@ router.get('/profilejoe', verifyToken,(req, res) => {
             __v : 0
         }
     ])
+})
+
+router.get('/teachers', async (req, res) => {
+    const user =  await User.find()
+    return res.status(200).json(user)
+    
 })
 
 
