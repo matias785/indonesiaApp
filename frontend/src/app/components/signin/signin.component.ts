@@ -24,11 +24,12 @@ export class SigninComponent implements OnInit {
   }
 
   signIn() {
+    console.log(this.user);
     this.authService.signIn(this.user)
       .subscribe(
         res => {console.log(res)
         localStorage.setItem('token', res.token)
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/teachers']);
         },
         err => console.log(err)
         );

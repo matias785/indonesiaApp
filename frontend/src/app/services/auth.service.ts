@@ -15,11 +15,11 @@ export class AuthService {
   ) { }
 
   newUser(user:any) {
-     return this.http.post<any>(this.URL + '/newuser', user)
+     return this.http.post<any>(this.URL + '/new-user', user)
   }
 
   signIn(user: any) {
-    return this.http.post<any>(this.URL + '/signIn', user)
+    return this.http.post<any>(this.URL + '/sign-in', user)
   } 
 
   loggedIn() {
@@ -32,7 +32,7 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('token');
-    this.router.navigate(['/signin'])
+    this.router.navigate(['/sign-in'])
   }
   
 }

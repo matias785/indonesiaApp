@@ -10,7 +10,7 @@ const User = require('../models/User');
 router.get('/', (req, res) =>
     res.send('hello world'))
 
-router.post('/newuser', async (req, res) => {
+router.post('/new-user', async (req, res) => {
     const { name, lastName, gender, yearsOld, dni, adress, email, type, matter, password} = req.body;
     const newUser = new User({name, lastName, gender, yearsOld, dni, adress, email, type, matter, password})
     await newUser.save();
@@ -19,7 +19,7 @@ router.post('/newuser', async (req, res) => {
     res.status(200).json({token});
 })
 
-router.post('/signin', async (req, res) => {
+router.post('/sign-in', async (req, res) => {
     const { name, password} = req.body;
     const user = await User.findOne({name})
 
@@ -31,7 +31,7 @@ router.post('/signin', async (req, res) => {
 })
 
 
-router.get('/profilesultan', (req, res) => {
+router.get('/profile-sultan', (req, res) => {
     res.json([{
         _id : "60e3a8f2644ffb1b20099a65",
         name : "sultan",
@@ -46,7 +46,7 @@ router.get('/profilesultan', (req, res) => {
     }])   
 })
 
-router.get('/profilejoe', verifyToken,(req, res) => {
+router.get('/profile-joe', verifyToken,(req, res) => {
     res.json([
         {
             _id : "60e3ad8b5521da287c91acd7",

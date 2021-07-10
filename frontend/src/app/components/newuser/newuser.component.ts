@@ -37,7 +37,7 @@ export class NewuserComponent implements OnInit {
         res =>  {
           console.log(res)
           localStorage.setItem('token', res.token);
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['teachers']);
         }, 
         err =>  console.log(err)
       )

@@ -1,6 +1,25 @@
-<h1>Lista de Docentes</h1>
-<ul class="list-group">
-    <li class="list-group-item" *ngFor="let teacher of teachers">
-        {{ teacher }}
-    </li>
-</ul>
+
+<h1 align="center">Lista de Docentes</h1>
+<br>    
+
+<table class="table">
+    <caption>List of users</caption>
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre y Apellido</th>
+            <th scope="col">Materia</th>
+            <th scope="col">E-mail</th>
+            <th scope="col"> DNI </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let teacher of teachers; index as i">
+            <th scope="row">{{ i + 1 }} </th>
+            <td> {{ teacher["name"] }} {{teacher["lastName"]}} </td>
+            <td> {{ teacher["matter"]}} </td>
+            <td> {{ teacher["email"]}} </td>
+            <td> {{ teacher["dni"]}} </td>
+        </tr>
+    </tbody>
+</table>

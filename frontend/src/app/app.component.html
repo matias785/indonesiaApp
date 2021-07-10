@@ -17,13 +17,13 @@
           <a class="nav-link" href="/contact">Contacto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/privateprofile">Perfil privado</a>
+          <a class="nav-link" href="/private-profile">Perfil privado</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
         <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
           <li class="nav-item">
-            <a class="nav-link" href="/signin">Iniciar Sesion</a>
+            <a class="nav-link" href="/sign-in">Iniciar Sesion</a>
           </li>
 
         </ng-container>
@@ -32,7 +32,7 @@
             <a class="nav-link" href="/teachers">Docentes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/newuser">Crear Docente</a>
+            <a class="nav-link" href="/new-user">Crear Docente</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" (click)="authService.logout()">Cerrar Sesion</a>

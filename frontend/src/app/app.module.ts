@@ -11,7 +11,6 @@ import { PrivateprofileComponent } from './components/privateprofile/privateprof
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import {FormsModule } from '@angular/forms';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AuthGuard } from './auth.guard';
@@ -28,7 +27,6 @@ import { TechearsComponent } from './components/techears/techears.component'
     PrivateprofileComponent,
     HomeComponent,
     ContactComponent,
-    DashboardComponent,
     TechearsComponent
   ],
   imports: [
