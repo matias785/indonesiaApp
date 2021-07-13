@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { TeachersService } from '../../services/teachers.service';
 
 @Component({
   selector: 'app-privateprofile',
@@ -9,13 +10,36 @@ import { ActivatedRoute } from '@angular/router';
 export class PrivateprofileComponent implements OnInit {
 
   constructor( 
-    private router: ActivatedRoute 
+    private route: ActivatedRoute,
+    private router: Router,
+    private teachersService: TeachersService 
   ) { }
 
+  teacher = '';
+  profile:any ;
+  param = {"name": ''}
+
+
   ngOnInit(): void {
-    this.router.paramMap.subscribe(params => {
-      const id = params.get('name')
-    })
+    this.route.params.subscribe( (params) =>{this.teacher = params.name } )
+    this.param.name = this.teacher
+    console.log(this.param)
+    this.teachersService.getOneTeacher(this.param)
+      .subscribe(
+        res => { 
+          this.profile = res
+          console.log(this.profile)
+        },
+        err => console.log(err)
+
+      )
+
+    }
+
+
+
   }
 
-}
+
+
+

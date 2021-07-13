@@ -10,6 +10,7 @@ import { TeachersService } from '../../services/teachers.service';
 export class TechearsComponent implements OnInit {
 
   teachers = [];
+  
 
 
 
@@ -22,8 +23,7 @@ export class TechearsComponent implements OnInit {
     this.teachersService.getTeacher()
       .subscribe(
         res => {
-          this.teachers = res
-          console.log(this.teachers[0]["name"])
+          this.teachers = res;
         },
         err => console.log(err)
       )

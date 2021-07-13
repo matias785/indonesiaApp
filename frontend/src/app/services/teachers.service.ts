@@ -16,7 +16,7 @@ export class TeachersService {
     return this.http.get<any>(this.URL + '/teachers');
   }
   
-  getOneTeacher(name: String) {
-    return this.http.get<any>(this.URL + '/profile-teacher')
+  getOneTeacher(name: any) {
+    return this.http.post<any>(this.URL + '/profile-teacher', name)
   }
 }

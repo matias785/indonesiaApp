@@ -16,7 +16,7 @@
     <tbody>
         <tr *ngFor="let teacher of teachers; index as i">
             <th scope="row">{{ i + 1 }} </th>
-            <td> {{ teacher["name"] }} {{teacher["lastName"]}} </td>
+            <a href="/private-profile/{{ teacher['name'] }}"><td> {{ teacher["name"] }} {{teacher["lastName"]}} </td></a>
             <td> {{ teacher["matter"]}} </td>
             <td> {{ teacher["email"]}} </td>
             <td> {{ teacher["dni"]}} </td>
