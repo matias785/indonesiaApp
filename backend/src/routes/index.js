@@ -31,41 +31,17 @@ router.post('/sign-in', async (req, res) => {
 })
 
 
-router.get('/profile-sultan', (req, res) => {
-    res.json([{
-        _id : "60e3a8f2644ffb1b20099a65",
-        name : "sultan",
-        lastName : "palaversich",
-        email : "sultan@elperritofiestero.com",
-        password : "1234",
-        position : "Director",
-        createdAt : "2021-07-06T00:50:58.165Z",
-        updatedAt : "2021-07-06T00:50:58.165Z",
-        __v : 0
-        
-    }])   
-})
-
-router.get('/profile-joe', verifyToken,(req, res) => {
-    res.json([
-        {
-            _id : "60e3ad8b5521da287c91acd7",
-            name : "joe",
-            lastNam : "Lopez",
-            email : "joelopez@elperritofiestero.com",
-            password : "password",
-            position : "Director",
-            createdAt : "2021-07-06T01:10:35.758Z",
-            updatedAt : "2021-07-06T01:10:35.758Z",
-            __v : 0
-        }
-    ])
-})
-
 router.get('/teachers', async (req, res) => {
     const user =  await User.find()
     return res.status(200).json(user)
     
+})
+
+router.post('/profile-teacher', async (req, res) => {
+    const { name } = req.body;
+    const user = await User.findOne({name})
+
+    return res.json(user)
 })
 
 

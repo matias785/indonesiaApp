@@ -50,7 +50,11 @@ const routes: Routes = [
     path: 'teachers',
     component: TechearsComponent,
     canActivate: [AuthGuard]
-  }
+  },
+   {
+     path: 'teachers/:name',
+     component: PrivateprofileComponent
+   }
 ];
 
 @NgModule({
