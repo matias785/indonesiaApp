@@ -9,36 +9,36 @@ import { TeachersService } from '../../services/teachers.service';
 })
 export class PrivateprofileComponent implements OnInit {
 
-  constructor( 
+  constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private teachersService: TeachersService 
+    private teachersService: TeachersService
   ) { }
 
   teacher = '';
-  profile:any ;
-  param = {"name": ''}
+  profile: any;
+  param = { "name": '' }
 
 
   ngOnInit(): void {
-    this.route.params.subscribe( (params) =>{this.teacher = params.name } )
+    
+    
+    this.route.params.subscribe((params) => { this.teacher = params.name })
     this.param.name = this.teacher
     console.log(this.param)
     this.teachersService.getOneTeacher(this.param)
       .subscribe(
-        res => { 
+        res => {
           this.profile = res
           console.log(this.profile)
         },
         err => console.log(err)
-
       )
-
-    }
-
-
-
   }
+
+
+
+}
 
 
 
