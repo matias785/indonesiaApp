@@ -7,10 +7,11 @@ import { NewuserComponent } from './components/newuser/newuser.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { PrivateprofileComponent } from './components/privateprofile/privateprofile.component';
 import { HomeComponent } from './components/home/home.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { TechearsComponent } from './components/techears/techears.component'
 
 import { AuthGuard } from './auth.guard';
+import {InscriptionComponent} from "./components/inscription/inscription.component";
+import {NewsComponent} from "./components/news/news.component";
 
 
 
@@ -43,13 +44,17 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'contact',
-    component: ContactComponent
+    path: 'news',
+    component: NewsComponent
   },
   {
     path: 'teachers',
     component: TechearsComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'pre-inscription',
+    component: InscriptionComponent
   }
 ];
 

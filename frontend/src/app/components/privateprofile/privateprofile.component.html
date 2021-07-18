@@ -1,9 +1,35 @@
-<p>privateprofile works!</p>
+<div class="container">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1>{{ profile.name }} {{ profile.lastName }}</h1>
+      <br/>
+      <h3>{{ profile.email }}</h3>
+      <br/>
+      <hr>
+      <p>
+        <strong>Nombre</strong>:                    {{ profile.name }}  <br/>
+        <strong>Apellido</strong>:                  {{ profile.lastName }} <br/>
+        <strong>Genero</strong>:                    {{ profile.gender }} <br/>
+        <strong>Edad</strong>:                      {{ profile.yearsOld }} <br/>
+        <strong>Numero de Documento</strong>:       {{ profile.dni }} <br/>
 
+        <strong>Direccion</strong>:                 {{ profile.adress }} <br/>
+        <strong>Email</strong>:                     {{ profile.email }} <br/>
+        <strong>Cargo</strong>:                     {{ profile.type }} <br/>
+        <strong>Materia</strong>:                   {{ profile.matter }} <br/>
 
+      </p>
+
+    </div>
+  </div>
+
+</div>
 
 <div *ngIf="profile">
-  
+
+
+
+  <!--
   <div class="container">
     <div class="row">
       <div class="col-12 my-3 pt-3 shadow">
@@ -20,12 +46,12 @@
           <strong>Genero</strong>: {{ profile.gender }} <br/>
           <strong>Edad</strong>: {{ profile.yearsOld }} <br/>
           <strong>Numero de Documento</strong>: {{ profile.dni }} <br/>
-          
+
           <strong>Direccion</strong>: {{ profile.adress }} <br/>
           <strong>Email</strong>: {{ profile.email }} <br/>
           <strong>Cargo</strong>: {{ profile.type }} <br/>
           <strong>Materia</strong>: {{ profile.matter }} <br/>
-  
+
         </p>
       </div>
     </div>
@@ -34,3 +60,4 @@
 </div>
 
 
+-->

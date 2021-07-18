@@ -1,0 +1,10 @@
+.noti{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.boton {
+  position: relative;
+  bottom: 0px;
+  }

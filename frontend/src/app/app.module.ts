@@ -9,13 +9,14 @@ import { SigninComponent } from './components/signin/signin.component';
 import { AboutComponent } from './components/about/about.component';
 import { PrivateprofileComponent } from './components/privateprofile/privateprofile.component';
 import { HomeComponent } from './components/home/home.component';
-import { ContactComponent } from './components/contact/contact.component';
 import {FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './services/token-interceptor.service';
-import { TechearsComponent } from './components/techears/techears.component'
+import { TechearsComponent } from './components/techears/techears.component';
+import { InscriptionComponent } from './components/inscription/inscription.component';
+import { NewsComponent } from './components/news/news.component';
 
 
 @NgModule({
@@ -26,8 +27,9 @@ import { TechearsComponent } from './components/techears/techears.component'
     AboutComponent,
     PrivateprofileComponent,
     HomeComponent,
-    ContactComponent,
-    TechearsComponent
+    TechearsComponent,
+    InscriptionComponent,
+    NewsComponent,
   ],
   imports: [
     BrowserModule,
