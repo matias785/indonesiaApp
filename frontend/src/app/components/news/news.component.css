@@ -4,7 +4,7 @@
   justify-content: space-around;
 }
 
-.boton {
-  position: relative;
-  bottom: 0px;
-  }
+.btn-outline-info {
+  position: absolute;
+  bottom: 1em;
+}

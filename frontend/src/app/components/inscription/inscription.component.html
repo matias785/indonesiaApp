@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-4 mx-auto">
     <div class="card">
-      <div class="card-header m-auto ">
+      <div class="card-header d-flex justify-content-center">
         Pre-Inscripcion 2200
       </div>
       <div class="card-body">
@@ -24,7 +24,7 @@
             <input type="text"name="yearsOld" class="form-control" placeholder="Edad" required>
           </div>
           <div class="form-group">
-            <input type="text"  name="dni" class="form-control" placeholder="Numero   de Documento" required>
+            <input type="text"  name="dni" class="form-control" placeholder="Numero de Documento" required>
           </div>
           <div class="form-group">
             <input type="text" name="adress" class="form-control" placeholder="Direccion" required>
@@ -33,33 +33,21 @@
             <input type="text"  name="email" class="form-control" placeholder="Email" required>
           </div>
           <div class="form-group">
+            <input type="text" name="tutor" class="form-control" placeholder="Nombre del Tutor">
+                      </div>
+          <div class="form-group">
             <select name="select" class="form-control"  name="type" placeholder="materias">
-              <option value="" hidden>Cargo</option>
-              <option value="adminitrativo">Administrativo</option>
-              <option value="docente">Docente</option>
-              <option value="directivo">Directivo</option>
-              <option value="Empleado">Empleado</option>
+              <option value="" hidden>Grado a ingresar</option>
+              <option value="adminitrativo">1ro</option>
+              <option value="docente">3ro</option>
+              <option value="docente">4to</option>
+              <option value="docente">5to</option>
+              <option value="docente">6to</option>
+              <option value="docente">7to</option>
+              <option value="docente">8vo</option>
             </select>
           </div>
-          <div class="form-group">
-            <select name="select" class="form-control" name="matter" placeholder="materias">
-              <option value="" hidden>Asignatura</option>
-              <option value="Lengua">Lengua</option>
-              <option value="Ciencias Sociales">Ciencias Sociales</option>
-              <option value="Ciencias Naturales">Ciencias Naturales</option>
-              <option value="Educación física">Educación física</option>
-              <option value="Tecnología">Tecnología</option>
-              <option value="Música">Música</option>
-              <option value="Formación Ética y Ciudadana">Formación Ética y Ciudadana</option>
-              <option value="Inglés">Inglés</option>
-              <option value="Plástica">Plástica</option>
-              <option value="Lengua" selected>Lengua</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <input type="password"  name="password" class="form-control" placeholder="Password" required>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">SignUp</button>
+          <button type="submit" class="btn btn-success btn-block">Enviar Formulario</button>
         </form>
       </div>
     </div>
